@@ -1,0 +1,6 @@
+target/
+!target/*.jar
+k8s/
+.git/
+.gitignore
+README.md 
