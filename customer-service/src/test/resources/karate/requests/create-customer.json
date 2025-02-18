@@ -1,0 +1,17 @@
+{
+  "email": "john.doe32@example.com",
+  "firstName": "John",
+  "lastName": "Doe",
+  "phoneNumber": "1234567890",
+  "addresses": [
+    {
+      "streetAddress": "123 Main St",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10001",
+      "country": "USA",
+      "addressType": "SHIPPING",
+      "default": true
+    }
+  ]
+} 

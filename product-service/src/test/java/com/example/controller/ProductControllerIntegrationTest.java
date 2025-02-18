@@ -7,8 +7,8 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import com.ecommerce.dto.CreateProductRequest;
-import com.ecommerce.dto.ProductResponse;
+import com.mkalaimalai.dto.ProductDTO;
+import com.mkalaimalai.dto.ProductDTORequest;
 
 import java.math.BigDecimal;
 
@@ -20,7 +20,7 @@ class ProductControllerIntegrationTest {
 
     @Test
     void createProduct_Success() {
-        CreateProductRequest request = new CreateProductRequest();
+        ProductDTORequest request = new ProductDTORequest();
         request.setSku("TEST-001");
         request.setName("Test Product");
         request.setPrice(BigDecimal.valueOf(99.99));
@@ -33,7 +33,7 @@ class ProductControllerIntegrationTest {
             .bodyValue(request)
             .exchange()
             .expectStatus().isCreated()
-            .expectBody(ProductResponse.class)
+            .expectBody(ProductDTO.class)
             .value(response -> {
                 assert response.getSku().equals(request.getSku());
                 assert response.getName().equals(request.getName());

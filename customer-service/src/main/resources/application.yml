@@ -23,4 +23,4 @@ java:
 logging:
   level:
     org.springframework.r2dbc: DEBUG
-    com.example.customer: DEBUG 
+    com.example.customer_service: DEBUG

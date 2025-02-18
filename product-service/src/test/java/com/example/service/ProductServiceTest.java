@@ -8,12 +8,12 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.PageRequest;
 
-import com.ecommerce.dto.CreateProductRequest;
-import com.ecommerce.dto.ProductResponse;
-import com.ecommerce.mapper.ProductMapper;
-import com.ecommerce.model.Product;
-import com.ecommerce.repository.ProductRepository;
-import com.ecommerce.service.ProductService;
+import com.mkalaimalai.dto.ProductDTO;
+import com.mkalaimalai.dto.ProductDTORequest;
+import com.mkalaimalai.mapper.ProductMapper;
+import com.mkalaimalai.model.Product;
+import com.mkalaimalai.repository.ProductRepository;
+import com.mkalaimalai.service.ProductService;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -37,8 +37,8 @@ class ProductServiceTest {
     private ProductService productService;
 
     private Product product;
-    private ProductResponse productResponse;
-    private CreateProductRequest createRequest;
+    private ProductDTO productResponse;
+    private ProductDTORequest createRequest;
 
     @BeforeEach
     void setUp() {
@@ -50,7 +50,7 @@ class ProductServiceTest {
             .stockQuantity(10)
             .build();
 
-        productResponse = ProductResponse.builder()
+        productResponse = ProductDTO.builder()
             .id(1L)
             .sku("TEST-001")
             .name("Test Product")
@@ -58,7 +58,7 @@ class ProductServiceTest {
             .stockQuantity(10)
             .build();
 
-        createRequest = new CreateProductRequest();
+        createRequest = new ProductDTORequest();
         createRequest.setSku("TEST-001");
         createRequest.setName("Test Product");
         createRequest.setPrice(BigDecimal.valueOf(99.99));
