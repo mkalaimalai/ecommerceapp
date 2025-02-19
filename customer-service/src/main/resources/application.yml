@@ -10,6 +10,12 @@ spring:
       mode: always
       schema-locations: classpath:schema.sql
 
+  admin:
+    client:
+      instance:
+        service-base-url: http://localhost:9095
+      name: customer-service
+
 server:
   port: 8080
 

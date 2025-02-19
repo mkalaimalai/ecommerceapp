@@ -10,7 +10,7 @@ import com.mkalaimalai.customer_service.domain.repository.CustomerRepository;
 
 import reactor.core.publisher.Mono;
 import org.springframework.data.domain.Pageable;
-import com.example.common.dto.PageResponse;
+import com.mkalaimalai.common.dto.PageResponse;
 import java.util.UUID;
 
 @Service

@@ -1,7 +1,7 @@
 package com.mkalaimalai.customer_service.web;
 
 import io.swagger.v3.oas.annotations.Operation;
-import com.example.common.dto.PageResponse;
+import com.mkalaimalai.common.dto.PageResponse;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
